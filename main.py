@@ -1,10 +1,7 @@
 import math, sys
 
 def returnIntArray(string = "") -> list:
-    int_array = []
-    for char in string:
-        int_array.append(ord(char) if ord(char) < 256 else 32)
-    return int_array
+    return map(lambda char: ord(char) if ord(char) < 256 else 32, string)
 
 def calcOperators(char_num = 0) -> tuple: # Needs re-factor a posteriori
     pow_numbers = [x**2 for x in range(1,17)]
